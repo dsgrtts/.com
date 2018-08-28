@@ -1,1 +1,588 @@
+/* Resets
+------------------------------*/
 
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,input,textarea,select,option,button,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;outline:none;vertical-align:top}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Generics 
+------------------------------*/
+
+html {
+  height: 100%; 
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ -webkit-text-size-adjust: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  transition: all .3s ease;
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+a:hover {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 30px;
+  font-weight: 100;
+  letter-spacing: .025em;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: .04em;
+  line-height: 1.6em;
+}
+
+button,
+.button {
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 100;
+  letter-spacing: .05em;
+}
+
+button.clear,
+.button.clear { 
+  background-color: rgba(200, 200, 200, .4);
+  /*box-shadow: inset 0 0 0 1px rgba(225, 225, 225, .8);*/
+  color: #fff;
+}
+
+button.white,
+.button.white { 
+  background-color: #fff;
+  color: #000;
+}
+
+button.sky,
+.button.sky {
+  background-color: #4abdff;
+  color: #fff;
+}
+
+button.silver,
+.button.silver {
+  background-color: #66717b;
+  color: #fff;
+}
+
+button.sky.outline,
+.button.sky.outline {
+  background-color: transparent;
+  border: 1px solid #4c9cc9;
+  color: #4c9cc9;
+}
+
+button.silver.outline,
+.button.silver.outline {
+  background-color: transparent;
+  border: 1px solid #66717b;
+  color: #66717b;
+}
+
+button:hover,
+.button:hover {
+  background-color: #4c9cc9;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .0);
+  color: #fff;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 4px;
+  letter-spacing: .025em;
+}
+
+.container {
+}
+
+.header {
+  left: 0;
+  right: 0;
+  padding: 30px 0;
+  position: fixed;
+  overflow: hidden;
+}
+
+.header .trademark {
+  top: 5px;
+  position: relative;
+  float: left;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #fff;
+}
+
+.header .trademark .icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+  display: inline-block;
+  background-image: url('../images/trademark.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position:  center center;
+}
+
+.nav ul {
+  float: right;
+  overflow: hidden;
+  background-color: #4abdff;
+  border-radius: 4px;
+  font-weight: 100;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav li {
+  display: inline-block;
+  float: left;
+}
+
+.nav li a {
+  padding: 15px 20px;
+  display: inline-block;
+  background-color: #4abdff;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  letter-spacing: .05em;
+  color: #fff;
+}
+
+.nav li a:hover {
+  background-color: #fff;
+  color: #4abdff;
+}
+
+.menu {
+}
+
+.logo {
+  float: left;
+}
+
+.intro {
+  padding: 200px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/intro-cover.png);
+  background-position: center top;
+  text-align: center;
+  color: #fff;
+}
+
+.intro p {
+  max-width: 500px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.intro .button {
+  padding: 13px 30px;
+}
+
+.intro .button:hover {
+  background-color: #fff;
+  color: #4abdff;
+}
+
+.intro .learn-more {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.intro .sign-up {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.main .inner {
+  overflow: hidden;
+}
+
+.inner {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+ padding: 50px 0;
+}
+
+.section {
+  padding: 70px 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+.section p {
+  max-width: 500px;
+  font-size: 16px;
+  color: #282f35;
+}
+
+.section .button.silver:hover {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #66717b;
+  color: #66717b;
+}
+
+.footer {
+  padding: 60px 0;
+  overflow: hidden;
+  background-color: #30383f;
+}
+
+.footer .inner {
+  overflow: hidden;
+}
+
+.footer .trademark {
+  opacity: .3;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #fff;
+}
+
+.footer .trademark img {
+  width: 45px;
+  margin-right: 5px;
+}
+
+.footer a {
+}
+
+.footer p {
+  font-size: 16px;
+  color: #6d7378;
+}
+
+.footer ul.list {
+  padding-top: 30px;
+  color: #6d7378;
+  line-height: 1.6em;
+}
+
+.footer .one-third {
+  padding-right: 30px;
+  float: left;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+.footer h1 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #6d7378;
+}
+
+.footer ul.follow,
+.footer ul.contact {
+  padding-top: 0;
+}
+
+.footer .follow li a {
+  width: 35px;
+  height: 35px;
+  transition: all .2s ease;
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 38px;
+  color: #30383f;
+}
+
+.footer .follow li a:hover {
+  line-height: 32px;
+}
+
+.footer .follow li {
+  margin: 0 10px 15px 0;
+  transition: all .2s ease;
+  text-align: center;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .20);
+  border-radius: 4px;
+}
+
+.footer .follow li:hover {
+  background-color: rgba(255, 255, 255, .50);
+}
+
+.sub-footer {
+  padding: 26px 0 25px 0;
+  background-color: #282f35;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: .05em;
+  color: #64696d;
+}
+
+.sub-footer .one-half {
+  float: left;
+}
+
+.sub-footer .copyright {
+  padding-top: 8px;
+  text-align: left;
+}
+
+.sub-footer .subscribe {
+  text-align: right;
+}
+
+.sub-footer .subscribe input {
+  width: 60%;
+  padding: 10px 15px;
+  transition: all .3s ease;
+  background-color: #21272c;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #fff;
+}
+
+.sub-footer .subscribe input:focus {
+  box-shadow: inset 0 0 200px 0 rgba(0, 0, 0, .2);
+}
+
+.sub-footer .subscribe button {
+  padding: 9px 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.sub-footer .subscribe button:hover {
+  background-color: #fff;
+  color: #4abdff;
+}
+
+/* Specifics
+------------------------------*/
+
+.what-is-cc {
+  background-image: url(../images/phone-1.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 45%;
+  text-align: left;
+  color: #7a8794;
+}
+
+/* Placements
+------------------------------*/
+
+.left   { float: left; }
+.right  { float: right; }
+.center { margin: 0 auto; }
+
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+
+.one-whole  { width: 100% }
+.one-half   { width: 50%; }
+.one-third  { width: 33.3%; }
+.one-fourth { width: 25%; }
+.two-third  { width: 66.6666666666667%; }
+
+.one-half,
+.one-third,
+.one-fourth,
+.two-third {
+}
+
+/* Media
+------------------------------*/
+
+@media only screen and (max-width : 767px) {
+  h1 {
+    font-size: 30px;
+  }
+  
+  .header {
+    height: 50px;
+    padding: 15px 0 40px;
+    padding-bottom: 0;
+    position: relative;
+    text-align: center;
+  }
+  
+  .header .trademark {
+    margin: 0 auto;
+    float: none;
+    font-size: 18px;
+    color: #4abdff;
+  }
+  
+  .header .trademark .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    display: inline-block;
+    background-image: url('../images/trademark-blue.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:  center center;
+  }
+  
+  .inner {
+    width: 90%;
+    min-width: 250px;
+  }
+   
+  .nav {
+    position: relative;
+  }
+  
+  .nav .menu {
+    width: 100%;
+    margin: 0 auto;
+    /*display: none;*/
+    margin-top: 30px;
+    background-color: transparent;
+    border-radius: 0;
+    text-align: center;
+  }
+  
+  .nav .menu a {
+    margin: 0 auto;
+    display: block;
+    background-color: #fff;
+    box-shadow: inset 0 1px 0 0 #ddd;
+    text-align: center;
+    color: #64727f;
+  }
+  
+  .nav .menu a:hover {
+    background-color: transparent;
+    color: #aaa;
+  }
+  
+  .nav .menu li {
+    margin: 0 auto;
+    float: none;
+    display: block;
+  }
+  
+  .nav .bars {
+    top: -33px;
+    right: -10px;
+    width: 15px;
+    padding: 13px 10px 10px 10px;
+    position: absolute;
+    display: block;
+  }
+  
+  .nav .bars .bar {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 5px;
+    display: block;
+    transition: all .3s ease;
+    background-color: #4abdff;
+  }
+  
+  .nav .bars:hover .bar {
+    background-color: #ddd;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  .intro {
+    padding: 50px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/intro-cover.png);
+    background-position: center center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  .inner {
+    width: 80%;
+  }
+  
+  .footer {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  
+  .footer .one-third {
+    margin-top: 40px;
+  }
+  
+  .sub-footer {
+    padding-bottom: 0;
+  }
+  
+  .sub-footer .one-half {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  .one-third {
+    width: 100%;
+  }
+  
+  .what-is-cc {
+    margin-right: 0;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 45%;
+    text-align: left;
+    color: #7a8794;
+  }
+  
+  .what-is-cc .one-half {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width : 435px) {
+  
+}
