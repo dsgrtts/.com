@@ -1,1 +1,543 @@
-
+body {
+  font-family: 'Vollkorn', serif;
+}
+input,
+button,
+select,
+textarea,
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+p {
+  word-wrap: break-word;
+}
+.smallcaps {
+  font-variant: small-caps;
+}
+.theme.base   { background-color: #fe4c4a }
+.theme.color  { color: #fe4c4a }
+.theme.border { border-color: #fe4c4a }
+.color.white {
+  color: white;
+}
+.color.black {
+  color: black;
+}
+/* header 
+*****************************************/
+header {
+  background-color: #000;
+  text-align: center;
+}
+header .container {
+  padding: 0;
+}
+/* hero
+*****************************************/
+.hero {
+  height: 100%;
+  margin: 30px 0 30px 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: black;
+  
+}
+.hero .side-left,
+.hero .side-right {
+  flex-grow: 1;
+  align-items: stretch;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .4;
+}
+.hero .side-right {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.hero .side-center {
+  padding: 60px 70px;
+  box-sizing: border-box;
+}
+.hero h1 {
+  word-wrap: break-word;
+  font-size: 100px;
+  line-height: .80em;
+  letter-spacing: 0;
+  color: black;
+}
+.hero p {
+  margin-top: 20px;
+  font-size: 31px;
+  line-height: 1.2em;
+  color: black;
+}
+/* items
+*****************************************/
+.items .container {
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+.items .container .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.items .list {
+  border-top: 2px solid black;
+}
+.items h3 {
+  margin: 0 0 0;
+  padding: 30px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  letter-spacing: .15em;
+}
+.item {
+  margin-bottom: 30px;
+  height: 400px;
+}
+.item .cover {
+  height: inherit;
+  position: relative;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:  center;
+}
+.item .cover:hover .actions {
+  top: -50px;
+  opacity: 1;
+}
+.item .anchor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: transparent;
+}
+.item .anchor img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  content: '';
+}
+.item .card {
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  position: absolute;
+}
+.item .caption {
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 15px;
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+.item .actions {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding: 0 20px;
+  position: absolute;
+  transition: all .3s ease;
+  background-color: rgba(0,0,0,.7);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 50px;
+}
+.item  button {
+  padding: 0;
+  cursor: pointer;
+  transition: color .3s ease;
+  border: 0;
+  background-color: transparent;
+  text-transform: inherit;
+  font-size: inherit;
+  color: white;
+}
+.item .actions button:hover {
+  color: #999;
+}
+.item .name {
+  display: block;
+  font-size: 22px;
+}
+.item .price {
+  margin-top: 5px;
+  display: block;
+  font-size: 21px;
+  color: black;
+}
+/* testimonies
+*****************************************/
+.testimonies {
+  padding: 100px 0 120px 0;
+  background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+.testimonies {
+  color: white;
+}
+.testimonies h1 {
+  margin-bottom: 30px;
+}
+.testimonies p {
+  font-size: 30px;
+  color: white;
+}
+.testimonies .quote {
+  max-width: 920px;
+  display: inline-block;
+}
+/* footer
+*****************************************/
+footer {
+  margin-top: 30px;
+  padding: 40px 0;
+  background-color: #000;
+  color: white;
+}
+footer hr {
+  margin: 100px 0 40px 0;
+  border-width: 2px;
+  border-color: #333;
+}
+footer h3 {
+  margin-bottom: 20px;
+  padding: 0 0 20px 0;
+  font-style: italic;
+  border-bottom: 1px solid #333;
+}
+footer p {
+  font-size: 20px;
+}
+footer a {
+  text-decoration: none;
+  transition: all .3s ease;
+  color: #888;
+}
+footer a:hover {
+  text-decoration: none;
+  color: #555;
+}
+footer .copyright {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* devices 
+*****************************************/
+@media (max-width: 600px) {
+  /* hero 
+  *****************************************/
+  .hero .side-center {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1em;
+    letter-spacing: 0;
+    color: black;
+  }
+  .hero p {
+    font-size: 21px;
+  }
+  /* testimonies 
+  *****************************************/
+  .testimonies {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .testimonies h1 {
+    word-wrap: break-word;
+    font-size: 40px;
+  }
+  .testimonies p {
+    font-size: 24px;
+  }
+  /* footer 
+  *****************************************/
+  footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  footer .copyright {
+    font-size: 15px;
+    letter-spacing: .03em;
+  }
+}
+@media (max-width: 767px) {
+   /* navbar 
+  *****************************************/
+  .navbar {
+    margin: 0;
+    padding-bottom: 0px;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+  }
+  .navbar-default
+  .navbar-brand {
+    width: 100%;
+    margin-top: 20px 0;
+    padding: 40px 0 60px 0;
+  }
+  .navbar-brand .logo {
+    display: inline-block;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    color: white;
+  }
+  .navbar-default 
+  .navbar-toggle {
+    top: 32px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    border-radius: 100px;
+    border: 0;
+    background-color: white;
+  }
+  .navbar-default 
+  .navbar-toggle 
+  .icon-bar {
+    width: 10px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    background-color: black;
+  }
+  .navbar-collapse 
+  .navbar-nav {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: .05em;
+  }
+  .navbar-default 
+  .navbar-nav > li > a {
+    color: #fff;
+  }
+  .navbar-collapse 
+  .navbar-nav > .active > a {
+    background-color: transparent;
+    box-shadow: inset 4px 0 0 #fff;
+    color: #999;
+  }
+  .navbar-collapse 
+  .navbar-nav > .active > a:hover {
+    background-color: transparent;
+  }
+  .nav .open>a, .nav 
+  .open > a:focus, 
+  .nav .open > a:hover {
+    background: red;
+    border-color: #fff;
+  }
+  .navbar-default 
+  .navbar-nav > 
+  .open > a, 
+  .navbar-default 
+  .navbar-nav > 
+  .open > a:focus, 
+  .navbar-default 
+  .navbar-nav > 
+  .open > a:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+  .navbar-default 
+  .navbar-collapse, 
+  .navbar-default 
+  .navbar-form {
+    border-color: transparent;
+  }
+  .navbar-nav 
+  .dropdown-menu a {
+    color: red;
+  }
+  .navbar-nav .open 
+  .dropdown-menu {
+    text-align: center;
+    font-size: 16px;
+  }
+  .navbar-nav .open 
+  .dropdown-menu 
+  .dropdown-header, 
+  .navbar-nav .open 
+  .dropdown-menu > li > a {
+    padding: 5px 0 15px 0;
+  }
+  .dropdown-menu .divider {
+    margin: 10px 0 20px 0;
+    background-color: #222;
+  }
+}
+@media (min-width: 768px) {
+  /* navbar 
+  *****************************************/
+  .navbar {
+    margin: 0;
+    padding-bottom: 0px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    font-size: 16px;
+    color: white;
+  }
+  .navbar a {
+    transition: color .3s ease;
+  }
+  .navbar-brand {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    margin: 30px 0 5px;
+    display: block;
+    float: none;
+    border-bottom: 2px solid #333;
+  }
+  .navbar-brand .logo {
+    display: inline-block;
+    text-align: center;
+    font-size: 70px;
+    font-style: italic;
+    color: white;
+  } 
+  .navbar-brand a {
+    text-decoration: none;
+  }
+  .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+    line-height: normal;
+  }
+  .dropdown-menu {
+    top: 55px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    border-top: 4px solid #777;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    text-transform: uppercase;
+    font-size: inherit;
+    letter-spacing: .10em;
+  }
+  .dropdown-menu > li {
+    margin: 0;
+    padding: 0;
+  }
+  .dropdown-menu > li > a {
+    margin: 0;
+    padding: 12px 20px;
+    color: black;
+  }
+  .dropdown-menu > li > a:hover {
+    background-color: #fafafa;
+    color: #666;
+  }
+  .collapse.navbar-collapse 
+  .navbar-nav {
+    margin: 0 auto;
+    display: inline-block;
+    float: none;
+  }
+  .collapse.navbar-collapse 
+  .navbar-nav > li > a {
+    margin: 0 15px;
+    padding: 20px 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: inherit;
+    letter-spacing: .10em;
+    color: inherit;
+  }
+  .collapse.navbar-collapse 
+  .navbar-nav > .active > a {
+    background-color: transparent;
+    box-shadow: inset 0 -4px 0 #fff;
+    color: #999;
+  }
+  .collapse.navbar-collapse
+  .navbar-nav > li > a:hover {
+    background-color: inherit;
+    color: #666;
+  }
+  .collapse.navbar-collapse
+  .navbar-nav > li > 
+  .dropdown-toggle {
+    background-color: inherit;
+    font-size: inherit;
+  }
+  .collapse.navbar-collapse 
+  .navbar-right > li:last-child > a { 
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .collapse.navbar-collapse 
+  .navbar-nav > li:first-child > a { 
+    margin-left: 0;
+  }
+  .collapse.navbar-collapse
+  .navbar-form {
+    padding-right: 0;
+  }
+  .collapse.navbar-collapse
+  .navbar-form input {
+    margin-right: 0;
+    padding: 0 0 5px 0;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: inherit;
+    letter-spacing: .10em;
+  }
+  .collapse.navbar-collapse
+  .navbar-form button {
+    margin-left: 0;
+    display: none;
+    border-radius: 0;
+  }
+  .collapse.navbar-collapse 
+  .navbar-nav {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    float: left;
+    text-align: center;
+  }
+  .collapse.navbar-collapse 
+  .navbar-nav > li {
+    float: none;
+    display: inline-block;
+  }
+  
+  .testimonies h1 {
+    margin-bottom: 30px;
+    font-size: 100px;
+  }
+}
