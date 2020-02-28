@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+
+    <title>Starter | Search</title>
+
+    <!-- icons -------------------->
+    <link rel='shortcut icon' href='assets/images/shortcut-icon.png'>
+    <link rel='apple-touch-icon' href='touch-icon-iphone.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='touch-icon-ipad.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='touch-icon-iphone-retina.png'>
+    <link rel='apple-touch-icon' sizes='167x167' href='touch-icon-ipad-retina.png'>
+
+    <!-- styles -------------------->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:100,300,400,500' rel='stylesheet'>
+    <link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'>
+    <link href='assets/styles/bootstrap.min.css' rel='stylesheet'>
+    <link href='assets/styles/bootstrap-slider.css' rel='stylesheet'>
+    <link href='assets/styles/starter.css' rel='stylesheet'>
+    <link href='assets/styles/custom.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <!-- nav -------------------->
+    <nav class='navbar navbar-expand-md navbar-dark theme bgColor lightFontColor'>
+      <a class='navbar-brand' href='index.html'>Starter</a>
+      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggle-icon'></span>
+        <span class='navbar-toggle-icon'></span>
+        <span class='navbar-toggle-icon'></span>
+      </button>
+
+      <div class='collapse navbar-collapse' id='navbarsExampleDefault'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'><a class='nav-link' href='index.html'>Home <span class='sr-only'>(current)</span></a></li>
+          <li class='nav-item'><a class='nav-link' href='#'>Link</a></li>
+          <li class='nav-item'><a class='nav-link disabled' href='#'>Disabled</a></li>
+          <li class='theme bgColor nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' href='http://example.com' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Dropdown</a>
+            <div class='dropdown-menu theme mediumFontColor' aria-labelledby='dropdown01'>
+              <a class='dropdown-item' href='#'>Action</a>
+              <a class='dropdown-item' href='#'>Another action</a>
+              <a class='dropdown-item' href='#'>Something else here</a>
+            </div>
+          </li>
+          <li class='nav-item'><a class='nav-link' href='contact.html'>Contact</a></li>
+        </ul>
+
+        <ul class='navbar-nav ml-auto'>
+          <li class='nav-item active'><a href='login.html' class='nav-link'>Log In</a></li>
+          <li class='nav-item active'><a href='signup.html' class='sign-up nav-link'>Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- main -------------------->
+    <main role='main'>
+      <!-- searchbar -------------------->
+      <form id='searchbar'>
+        <div class='full-search'>
+          <div class='searchbar'>
+            <div class='form'>
+              <div class='fields' id='typeahead'>
+                <input class='query typeahead' placeholder='Address, City, or Zip'>
+                <select id='search-type' class='type'>
+                  <option value='1'>Buy</option>
+                  <option value='2'>Rent</option>
+                </select>
+                <button class='button theme bgColor lightFontColor'>
+                    <span class='label'>Search</span>
+                    <i class='glass ion-ios-search-strong'></i>
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- advanced-search -------------------->
+        <div class='advanced-search row'>
+          <div class='search-filters mr-auto'>
+            <!--<select class='selectpicker filter'>
+              <option>Single Family</option>
+              <option>Multi-Family</option>
+              <option>Condominium</option>
+              <option>Mobile Home</option>
+              <option>All Types</option>
+              <option>Land</option>
+            </select>-->
+            <div class='btn-group'>
+              <button type='button' class='filter btn dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Price</button>
+              <div class='price-range dropdown-menu'>
+                <div class='heading'>Price Range</div>
+                <span class='slider-label-low'>$10,000</span>
+                <span class='slider-label-high'>$10,000,000</span>
+                <input id='priceSlider' class='price-slider' data-slider-min='10' data-slider-max='1000' data-slider-step='5' data-slider-value='[250,450]'>
+              </div>
+            </div>
+            <div class='btn-group'>
+              <button type='button' class='filter btn dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Bedrooms</button>
+              <div class='bedroom-range dropdown-menu'>
+                <div class='heading'>Bedrooms</div>
+                <div class='min'>
+                  <div class='label'>Min</div>
+                  <div class='buttons'>
+                    <button type='button'><i class='ion-ios-minus-empty'></i></button>
+                    <input class='number' value='1' maxlength='2'>
+                    <button type='button'><i class='ion-ios-plus-empty'></i></button>
+                  </div>
+                </div>
+                <hr class='invisible'>
+                <div class='max'>
+                  <div class='label'>Max</div>
+                  <div class='buttons'>
+                    <button type='button'><i class='ion-ios-minus-empty'></i></button>
+                    <input class='number' value='1' maxlength='2'>
+                    <button type='button'><i class='ion-ios-plus-empty'></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='btn-group'>
+              <button type='button' class='filter btn dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Bathrooms</button>
+              <div class='bathroom-range dropdown-menu'>
+                <div class='heading'>Half Baths</div>
+                <div class='min'>
+                  <div class='label'>Min</div>
+                  <div class='buttons'>
+                    <button type='button'><i class='ion-ios-minus-empty'></i></button>
+                    <input class='number' value='1' maxlength='2'>
+                    <button type='button'><i class='ion-ios-plus-empty'></i></button>
+                  </div>
+                </div>
+                <hr class='invisible'>
+                <div class='max'>
+                  <div class='label'>Max</div>
+                  <div class='buttons'>
+                  <button type='button'><i class='ion-ios-minus-empty'></i></button>
+                  <input class='number' value='1' maxlength='2'>
+                  <button type='button'><i class='ion-ios-plus-empty'></i></button>
+                  </div>
+                </div>
+                <hr>
+                <div class='heading'>Full  Baths</div>
+                <div class='min'>
+                  <div class='label'>Min</div>
+                  <div class='buttons'>
+                    <button type='button'><i class='ion-ios-minus-empty'></i></button>
+                    <input class='number' value='1' maxlength='2'>
+                    <button type='button'><i class='ion-ios-plus-empty'></i></button>
+                  </div>
+                </div>
+                <hr class='invisible'>
+                <div class='max'>
+                  <div class='label'>Max</div>
+                  <div class='buttons'>
+                  <button type='button'><i class='ion-ios-minus-empty'></i></button>
+                  <input class='number' value='1' maxlength='2'>
+                  <button type='button'><i class='ion-ios-plus-empty'></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='search-options mr-3 ml-auto'>
+            <span class='label'>Sort By </span>
+            <select class='selectpicker option btn'>
+              <option>Single Family</option>
+              <option>Multi-Family</option>
+              <option>Condominium</option>
+              <option>Mobile Home</option>
+              <option>All Types</option>
+              <option>Land</option>
+            </select>
+            <select class='selectpicker option btn'>
+              <option>Bedrooms</option>
+              <option>Bathrooms</option>
+              <option>Price</option>
+              <option>Square Feet</option>
+              <option>Address</option>
+              <option>Created</option>
+              <option>Updated</option>
+            </select>
+            <select class='selectpicker option btn'>
+              <option>A-Z</option>
+              <option>Z-A</option>
+            </select>
+            <button type='button' class='btn btn-outline option'>Save Search</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- searched -------------------->
+      <div class='searched properties'>
+        <div class='container'>
+          <div class='summary'>Showing <b>1-20</b> of <b>707</b> items.</div>
+          <div class='row'>
+            <div class='property col-sm-6 col-lg-4 col-xl-3'>
+              <a href='single.html'>
+                <div class='photo' style='background-image:url("assets/images/stock-photo-1.jpg")'>
+                  <div class='mask'>
+                    <div class='head'>
+                      <div class='price ml-auto theme lightFontColor'>$1,525,000</div>
+                    </div>
+                    <div class='foot'>
+                      <div class='address'>
+                        <span class='street'>10 Nantasket Ave.</span>
+                        <span class='city'>Boston, MA</span>
+                      </div>
+                      <div class='amenities'>5 Beds &#124; 5 Baths &#124; 1.5k Ft<sup>2</sup> &#124; .65 Ac</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <button type='button' class='save-property'>
+                <i class='ion-heart'></i>
+              </button>
+            </div>
+            <div class='article col-sm-6 col-lg-4 col-xl-3'>
+              <a href='#blog.utrlamls.com'>
+                <div class='photo' style='background-image:url("http://blog.realagogo.com/wp-content/uploads/2018/02/cultured-marble-vanity-top-standard_3x2_29002806d5e69be7952ca658cfb5d2b3_1280x854_q85.jpg")'>
+                  <div class='mask'>
+                    <div class='foot'>
+                      <span class='title'>Big sale on bath items at Bed Bath & Beyond.</span>
+                      <div class='blurb' style='padding-top:5px; font-size: 14px;'>Ad</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class='pager theme darkFontColor'>
+            <ul class='pagination'>
+              <li class='page-item'><a class='page-link' href='#'><i class='ion-ios-arrow-left'></i></a></li>
+              <li class='page-item'><a class='page-link theme bgColor lightFontColor' href='#'>1</a></li>
+              <li class='page-item'><a class='page-link' href='#'>2</a></li>
+              <li class='page-item'><a class='page-link' href='#'>3</a></li>
+              <li class='page-item'><a class='page-link' href='#'><i class='ion-ios-arrow-right'></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -------------------->
+    <footer class='theme bgColor lightFontColor'>
+      <div class='container'>
+        <div class='list-group'>
+          <h5>Quick Search</h5>
+          <div class='cities row theme mediumFontColor'>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Allston, MA</a></li>
+              <li><a href='#'>Back Bay, MA</a></li>
+              <li><a href='#'>Bay Village, MA</a></li>
+              <li><a href='#'>Beacon Hill, MA</a></li>
+              <li><a href='#'>Brighton, MA</a></li>
+              <li><a href='#'>Charlestown, MA</a></li>
+              <li><a href='#'>Chinatown, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Dorchester, MA</a></li>
+              <li><a href='#'>East Boston, MA</a></li>
+              <li><a href='#'>Financial District, MA</a></li>
+              <li><a href='#'>Fort Hill, MA</a></li>
+              <li><a href='#'>Hyde Park, MA</a></li>
+              <li><a href='#'>Jamaica Plain, MA</a></li>
+              <li><a href='#'>Leather District, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Mattapan, MA</a></li>
+              <li><a href='#'>Midtown, MA</a></li>
+              <li><a href='#'>Mission Hill, MA</a></li>
+              <li><a href='#'>North End, MA</a></li>
+              <li><a href='#'>Roslindale, MA</a></li>
+              <li><a href='#'>Roxbury, MA</a></li>
+              <li><a href='#'>Seaport District, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>South Boston, MA</a></li>
+              <li><a href='#'>South End, MA</a></li>
+              <li><a href='#'>The Fenway, MA</a></li>
+              <li><a href='#'>Theatre District, MA</a></li>
+              <li><a href='#'>Waterfront, MA</a></li>
+              <li><a href='#'>West End, MA</a></li>
+              <li><a href='#'>West Roxbury, MA</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- copyright -------------------->
+        <div class='copyright'>
+          <a href='index.html' class='footer-brand'>&copy; Company, Inc.</a>
+          <a href='http://ULTRAMLS.com' class='powered-by'>Powered by <strong>ULTRAMLS &trade;</strong></a>
+        </div>
+        <div class='fineprint theme mediumFontColor'>
+          <p>The property listing data and information set forth herein were provided to MLS Property Information Network, Inc. from third party sources, including sellers, lessors and public records, and were compiled by MLS Property Information Network, Inc.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- scripts -------------------->
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+    <script>window.jQuery || document.write('<script src="assets/scripts/jquery-slim.min.js"><\/script>')</script>
+    <script src='assets/scripts/popper.min.js'></script>
+    <script src='assets/scripts/bootstrap.min.js'></script>
+    <script src='assets/scripts/bootstrap-slider.js'></script>
+    <script src='assets/scripts/typeahead.bundle.min.js'></script>
+    <script src='assets/scripts/typeahead.js'></script>
+    <script src='assets/scripts/search.js'></script>
+    <script>priceSlider = new Slider('#priceSlider', {})</script>
+  </body>
+</html>

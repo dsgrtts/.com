@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+
+    <title>Starter | 123 Mountain View St. Concord, NH</title>
+
+    <!-- icons -------------------->
+    <link rel='shortcut icon' href='assets/images/shortcut-icon.png'>
+    <link rel='apple-touch-icon' href='touch-icon-iphone.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='touch-icon-ipad.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='touch-icon-iphone-retina.png'>
+    <link rel='apple-touch-icon' sizes='167x167' href='touch-icon-ipad-retina.png'>
+
+    <!-- styles -------------------->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:100,300,400,500' rel='stylesheet'>
+    <link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'>
+    <link href='assets/styles/bootstrap.min.css' rel='stylesheet'>
+    <link href='assets/styles/bootstrap-slider.css' rel='stylesheet'>
+    <link href='assets/styles/swiper.min.css' rel='stylesheet'>
+    <link href='assets/styles/starter.css' rel='stylesheet'>
+    <link href='assets/styles/custom.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <!-- nav -------------------->
+    <nav class='navbar navbar-expand-md navbar-dark theme bgColor lightFontColor'>
+      <a class='navbar-brand' href='index.html'>Starter</a>
+      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggle-icon'></span>
+        <span class='navbar-toggle-icon'></span>
+        <span class='navbar-toggle-icon'></span>
+      </button>
+
+      <div class='collapse navbar-collapse' id='navbarsExampleDefault'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'><a class='nav-link' href='index.html'>Home <span class='sr-only'>(current)</span></a></li>
+          <li class='nav-item'><a class='nav-link' href='#'>Link</a></li>
+          <li class='nav-item'><a class='nav-link disabled' href='#'>Disabled</a></li>
+          <li class='theme bgColor nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' href='http://example.com' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Dropdown</a>
+            <div class='dropdown-menu theme mediumFontColor' aria-labelledby='dropdown01'>
+              <a class='dropdown-item' href='#'>Action</a>
+              <a class='dropdown-item' href='#'>Another action</a>
+              <a class='dropdown-item' href='#'>Something else here</a>
+            </div>
+          </li>
+          <li class='nav-item'><a class='nav-link' href='contact.html'>Contact</a></li>
+        </ul>
+
+        <ul class='navbar-nav ml-auto'>
+          <li class='nav-item'>
+            <a href='login.html' class='nav-link'>Log In</a>
+          </li>
+          <li class='nav-item active'>
+            <a href='signup.html' class='sign-up nav-link'>Sign Up</a>
+          </li>
+          <li class='nav-item'>
+            <button type='button' class='query collapsed' data-toggle='collapse' data-target='#fullSearch' aria-expanded='false' aria-controls='fullSearch'>
+              <i class='glass theme lightFontColor'></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- main -------------------->
+    <main role='main'>
+      <!-- searchbar -------------------->
+      <form id='searchbar' action='search.html'>
+        <div class='full-search collapse' id='fullSearch'>
+          <div class='searchbar'>
+            <div class='form'>
+              <div class='fields' id='typeahead'>
+                <input class='query typeahead' placeholder='Address, City, or Zip'>
+                <select id='search-type' class='type'>
+                  <option value='1'>Buy</option>
+                  <option value='2'>Rent</option>
+                </select>
+                <button class='button theme bgColor lightFontColor'>
+                    <span class='label'>Search</span>
+                    <i class='glass ion-ios-search-strong'></i>
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- single -------------------->
+      <div class='single'>
+        <div class='cover' style='background-image: url("assets/images/stock-photo-1.jpg")'>
+          <div class='container'>
+            <div class='lead-heading'>
+              <h1>
+                <span class='street'>123 Mountain View St.</span>
+                <span class='city'>Franklin, NH</span>
+              </h1>
+              <p class='amenities'>
+                <strong>5</strong> Beds |
+                <strong>5</strong> Baths |
+                <strong>15k</strong> Ft<sup>2</sup> |
+                <strong>.65 Ac</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class='container'>
+          <div class='row'>
+            <div class='main col-sm-8'>
+              <!-- swiper -------------------->
+              <style>
+                .slide-0 { background-image: url('assets/images/stock-photo-1.jpg') }
+                .slide-1 { background-image: url('assets/images/stock-photo-2.jpg') }
+                .slide-2 { background-image: url('assets/images/stock-photo-3.jpg') }
+                .slide-3 { background-image: url('assets/images/stock-photo-4.jpg') }
+                .slide-4 { background-image: url('assets/images/stock-photo-5.jpg') }
+                .slide-5 { background-image: url('assets/images/stock-photo-6.jpg') }
+              </style>
+              <div class='swiper-container'>
+                <div class='swiper-wrapper'>
+                  <div class='swiper-slide slide-0'></div>
+                  <div class='swiper-slide slide-1'></div>
+                  <div class='swiper-slide slide-2'></div>
+                  <div class='swiper-slide slide-3'></div>
+                  <div class='swiper-slide slide-4'></div>
+                  <div class='swiper-slide slide-5'></div>
+                </div>
+                <div class='swiper-nav-button swiper-button-next swiper-button-white theme bgColor'></div>
+                <div class='swiper-nav-button swiper-button-prev swiper-button-white theme bgColor'></div>
+              </div>
+              <div id='swiper-thumb-wrapper'>
+                <div id='swiper-thumb-scroller'>
+                  <ul class='swiper-thumbs'>
+                  </ul>
+                </div>
+              </div>
+              <!-- price -------------------->
+              <div class='cost'>
+                <span class='full'>
+                  <i class='point theme bgColor'></i>
+                  <span class='type'>For Sale</span>
+                  <span class='amount'>$909,000</span>
+                </span>
+              </div>
+              <hr class='divide'>
+              <!-- remarks -------------------->
+              <div class='remarks'>
+                <h4 class='heading'>Remarks</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sem a augue blandit, eu tempus urna convallis. Nam pharetra a orci a hendrerit. Morbi gravida, turpis eu ullamcorper maximus, ipsum enim sollicitudin nisi, eget imperdiet massa libero eget neque. Aenean porta mauris id maximus feugiat. Suspendisse pretium orci et libero blandit, ac tincidunt ex commodo. Nam scelerisque turpis ac dui sodales suscipit. In vitae ipsum et elit vehicula convallis. Aenean odio est, convallis vitae turpis quis, pretium cursus massa. Nam dignissim eleifend lacinia. Proin vel convallis risus.
+                </p>
+                <div class='show-more'>
+                  <a href='#' class='theme fontColor'>Show more</a>
+                </div>
+              </div>
+              <hr class='divide'>
+              <!-- video -------------------->
+              <div class='video'>
+                <h4 class='heading'>Video</h4>
+                <iframe src='https://www.youtube.com/embed/UPBJKppEXoQ?feature=oembed' frameborder='0' allowfullscreen></iframe>
+              </div>
+              <hr class='divide'>
+              <!-- location -------------------->
+              <div class='location'>
+                <h4 class='heading'>Location</h4>
+                <div class='map'>
+                  <img src='assets/images/map.png'>
+                </div>
+              </div>
+              <hr class='divide'>
+              <!-- details -------------------->
+              <h4 class='heading'>Details</h4>
+              <div class='details' id='details'>
+                <div class='list'>
+                  <h6 class='caption'>Construction</h6>
+                  <ul class='items'>
+                    <li>Basement:Y</li>
+                    <li>Basement Features:Full,Finished,Walk Out,Interior Access</li>
+                    <li>Construction:Frame</li>
+                    <li>Fireplaces:4</li>
+                    <li>Garage Spaces:2</li>
+                    <li>Living Area:4698.00</li>
+                    <li>Roof Materials:Asphalt/Fiberglass Shingles</li>
+                    <li>Rooms:10</li>
+                    <li>Single Family Type:Detached</li>
+                    <li>Style:Cape,Contemporary</li>
+                    <li>Year Built:1980</li>
+                  </ul>
+                </div>
+
+                <div class='list'>
+                  <h6 class='caption'>List</h6>
+                  <ul class='items'>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                  </ul>
+                </div>
+
+                <div class='list'>
+                  <h6 class='caption'>List</h6>
+                  <ul class='items'>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                  </ul>
+                </div>
+              </div>
+              <hr class='divide'>
+              <!-- bestimate -------------------->
+              <div class='bestimate'>
+                <h4 class='caption'>Bestimate &trade;</h4>
+                <div class='btn-years btn-group theme borderColor fontColor' role='group' aria-label='Basic example'>
+                  <button type='button' class='btn btn-secondary'>5 Year</button>
+                  <button type='button' class='btn btn-secondary'>10 Year</button>
+                  <button type='button' class='btn btn-secondary'>20 Year</button>
+                </div>
+                <img src='assets/images/chart.png'>
+              </div>
+            </div>
+
+            <!-- aside -------------------->
+            <aside class='aside col-sm-4'>
+              <!-- contact -------------------->
+              <div class='contact-agent card'>
+                <div class='portrait' style='background-image:url("assets/images/stock-photo-7.png")'></div>
+                <div class='agent-name text-center theme fontColor'>Jon Appleseed</div>
+                <span class='agent-title ml-auto theme bgColor'>Pro</span>
+                <div class='card-body text-center'>
+                  <div class='form d-none'>
+                    <div class='tele'>
+                      <i class='ion-ios-telephone-outline phone'></i>
+                      <span class='number'>(123) 456-7890</span>
+                    </div>
+                    <form>
+                      <input type='email' class='form-control' placeholder='Your email'>
+                      <input type='text' class='form-control' placeholder='Your phone'>
+                      <textarea class='form-control' placeholder='I am interested in this property and I would like to know more details.'></textarea>
+                      <div class='text-right'>
+                        <button type='submit' class='btn theme bgColor lightFontColor ml-auto'>Send</button>
+                      </div>
+                    </form>
+                  </div>
+                  <p class='mt-2'>To contact Jon, please <a class='theme fontColor' href='login.html'>log in.</a></p>
+                </div>
+              </div>
+              <!-- article -------------------->
+              <div class='article card'>
+                <a href='#blog.utrlamls.com'>
+                  <div class='photo' style='background-image:url("http://blog.realagogo.com/wp-content/uploads/2018/02/cultured-marble-vanity-top-standard_3x2_29002806d5e69be7952ca658cfb5d2b3_1280x854_q85.jpg")'>
+                    <div class='mask'>
+                      <div class='foot'>
+                        <span class='title'>Big sale at Bed Bath & Beyond.</span>
+                        <div class='blurb' style='padding-top:5px; font-size: 14px;'>Ad</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- sponsors -------------------->
+              <div class='sponsor card p-0'>
+                <a href='http://movingforgood.org'>
+                  <img src='assets/images/movingforgoodad.png'>
+                </a>
+              </div>
+              <!--<div class='sponsor card'>
+              </div>-->
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -------------------->
+    <footer class='theme bgColor lightFontColor'>
+      <div class='container'>
+        <div class='list-group'>
+          <h5>Quick Search</h5>
+          <div class='cities row theme mediumFontColor'>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Allston, MA</a></li>
+              <li><a href='#'>Back Bay, MA</a></li>
+              <li><a href='#'>Bay Village, MA</a></li>
+              <li><a href='#'>Beacon Hill, MA</a></li>
+              <li><a href='#'>Brighton, MA</a></li>
+              <li><a href='#'>Charlestown, MA</a></li>
+              <li><a href='#'>Chinatown, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Dorchester, MA</a></li>
+              <li><a href='#'>East Boston, MA</a></li>
+              <li><a href='#'>Financial District, MA</a></li>
+              <li><a href='#'>Fort Hill, MA</a></li>
+              <li><a href='#'>Hyde Park, MA</a></li>
+              <li><a href='#'>Jamaica Plain, MA</a></li>
+              <li><a href='#'>Leather District, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Mattapan, MA</a></li>
+              <li><a href='#'>Midtown, MA</a></li>
+              <li><a href='#'>Mission Hill, MA</a></li>
+              <li><a href='#'>North End, MA</a></li>
+              <li><a href='#'>Roslindale, MA</a></li>
+              <li><a href='#'>Roxbury, MA</a></li>
+              <li><a href='#'>Seaport District, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>South Boston, MA</a></li>
+              <li><a href='#'>South End, MA</a></li>
+              <li><a href='#'>The Fenway, MA</a></li>
+              <li><a href='#'>Theatre District, MA</a></li>
+              <li><a href='#'>Waterfront, MA</a></li>
+              <li><a href='#'>West End, MA</a></li>
+              <li><a href='#'>West Roxbury, MA</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- copyright -------------------->
+        <div class='copyright'>
+          <a href='index.html' class='footer-brand'>&copy; Company, Inc.</a>
+          <a href='http://ULTRAMLS.com' class='powered-by'>Powered by <strong>ULTRAMLS &trade;</strong></a>
+        </div>
+        <div class='fineprint theme mediumFontColor'>
+          <p>The property listing data and information set forth herein were provided to MLS Property Information Network, Inc. from third party sources, including sellers, lessors and public records, and were compiled by MLS Property Information Network, Inc.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- scripts -------------------->
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+    <script>window.jQuery || document.write('<script src="assets/scripts/jquery-slim.min.js"><\/script>')</script>
+    <script src='assets/scripts/popper.min.js'></script>
+    <script src='assets/scripts/bootstrap.min.js'></script>
+    <script src='assets/scripts/bootstrap-slider.js'></script>
+    <script src='assets/scripts/swiper.min.js'></script>
+    <script src='assets/scripts/iscroll.min.js'></script>
+    <script src='assets/scripts/typeahead.bundle.min.js'></script>
+    <script src='assets/scripts/typeahead.js'></script>
+    <script src='assets/scripts/single.js'></script>
+    <script>$('[data-toggle="tooltip"]').tooltip();</script>
+  </body>
+</html>

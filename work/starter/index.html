@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+
+    <title>Starter | Home</title>
+
+    <!-- icons -------------------->
+    <link rel='shortcut icon' href='assets/images/shortcut-icon.png'>
+    <link rel='apple-touch-icon' href='touch-icon-iphone.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='touch-icon-ipad.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='touch-icon-iphone-retina.png'>
+    <link rel='apple-touch-icon' sizes='167x167' href='touch-icon-ipad-retina.png'>
+
+    <!-- styles -------------------->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:100,300,400,500' rel='stylesheet'>
+    <link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'>
+    <link href='assets/styles/bootstrap.min.css' rel='stylesheet'>
+    <link href='assets/styles/swiper.min.css' rel='stylesheet'>
+    <link href='assets/styles/starter.css' rel='stylesheet'>
+    <link href='assets/styles/custom.css' rel='stylesheet'>
+
+    <!--
+    for changing the theme color!
+    <style>
+      .theme.bgColor         { background-color: teal } <-- black, blue, red, purple...
+      .theme.bgColorInverted { background-color: white }
+      .theme.lightFontColor  { color: white }
+      .theme.mediumFontColor { color: rgba(255,255,255,.6) }
+      .theme.darkFontColor   { color: black }
+      .theme.linkColor a     { color: white }
+    </style>
+    -->
+  </head>
+
+  <body>
+    <!-- nav -------------------->
+    <nav class='navbar navbar-expand-md navbar-dark theme bgColor lightFontColor'>
+      <a class='navbar-brand' href='#'>
+        <div class='brand-logo'>
+          Starter <!--<img src='assets/images/brand-logo.png' alt='Ultra MLS'>-->
+        </div>
+      </a>
+      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggle-icon'></span>
+        <span class='navbar-toggle-icon'></span>
+        <span class='navbar-toggle-icon'></span>
+      </button>
+
+      <div class='collapse navbar-collapse' id='navbarCollapse'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'><a class='nav-link theme lightFontColor' href='index.html'>Home <span class='sr-only'>(current)</span></a></li>
+          <li class='nav-item'><a class='nav-link' href='#'>Link</a></li>
+          <li class='nav-item'><a class='nav-link disabled' href='#'>Disabled</a></li>
+          <li class='theme bgColor nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' href='http://example.com' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Dropdown</a>
+            <div class='dropdown-menu theme mediumFontColor' aria-labelledby='dropdown01'>
+              <a class='dropdown-item' href='#'>Action</a>
+              <a class='dropdown-item' href='#'>Another action</a>
+              <a class='dropdown-item' href='#'>Something else here</a>
+            </div>
+          </li>
+          <li class='nav-item'><a class='nav-link' href='contact.html'>Contact</a></li>
+        </ul>
+
+        <ul class='navbar-nav ml-auto'>
+          <li class='nav-item active'><a href='login.html' class='nav-link'>Log In</a></li>
+          <li class='nav-item active'><a href='signup.html' class='sign-up nav-link'>Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- main -------------------->
+    <main class='index' role='main'>
+      <!-- swiper -------------------->
+      <div class='swiper-container'>
+        <div class='swiper-wrapper'>
+          <div class='swiper-slide' style='background-image:url("assets/images/stock-photo-1.jpg")'></div>
+          <div class='swiper-slide' style='background-image:url("assets/images/stock-photo-4.jpg")'></div>
+          <div class='swiper-slide' style='background-image:url("assets/images/stock-photo-5.jpg")'></div>
+        </div>
+        <div class='swiper-content static'>
+          <div class='container'>
+            <div class='copy theme lightFontColor'>
+              <h1>The path to success starts here.</h1>
+              <p>Starter is a premium real estate template designed to meet your needs.</p>
+            </div>
+            <button class='btn btn-lg theme lightFontColor get-starter  bg-success'>
+              <span class='align-top mt-1 mr-1 d-inline-block'>Get Starter for just</span>
+              <h4 class='d-inline'>$199</h4>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- searchbar -------------------->
+      <div class='searchbar-index'>
+        <form id='searchbar' action='search.html'>
+          <div class='container'>
+            <div class='searchbar'>
+              <div class='form'>
+                <div class='fields' id='typeahead'>
+                  <input type='text' class='query typeahead' placeholder='Address, City, or Zip'>
+                  <select class='type'>
+                    <option value='1'>Buy</option>
+                    <option value='2'>Rent</option>
+                  </select>
+                  <button class='button theme bgColor lightFontColor'>
+                    <span class='label'>Search</span>
+                    <i class='glass ion-ios-search-strong'></i>
+                  </button>
+                </div>
+                <div class='powered-by'>
+                  <a href='http://ULTRAMLS.com'>
+                    Powered by <strong class='theme bgColor lightFontColor'>ULTRAMLS &trade;</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- featured -------------------->
+      <div class='featured properties'>
+        <div class='container'>
+          <div class='headline'>
+            <h2>Featured Listings</h2>
+          </div>
+          <div class='row'>
+            <div class="property col-sm-12 col-md-6">
+              <a href='single.html'>
+                <div class='photo' style='background-image:url("assets/images/stock-photo-1.jpg")'>
+                  <div class='mask'>
+                    <div class='head'>
+                      <div class='tag mr-auto theme darkFontColor'>Featured</div>
+                      <div class='price ml-auto theme lightFontColor'>$1,525,000</div>
+                    </div>
+                    <div class='body'></div>
+                    <div class='foot'>
+                      <div class='address'>10 Nantasket Ave. Boston, MA</div>
+                      <div class='remarks'><p>Spectacular high end renovation in the heart of Brighton.</p></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -------------------->
+    <footer class='theme bgColor lightFontColor'>
+      <div class='container'>
+        <div class='list-group'>
+          <h5>Quick Search</h5>
+          <div class='cities row theme mediumFontColor'>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Allston, MA</a></li>
+              <li><a href='#'>Back Bay, MA</a></li>
+              <li><a href='#'>Bay Village, MA</a></li>
+              <li><a href='#'>Beacon Hill, MA</a></li>
+              <li><a href='#'>Brighton, MA</a></li>
+              <li><a href='#'>Charlestown, MA</a></li>
+              <li><a href='#'>Chinatown, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Dorchester, MA</a></li>
+              <li><a href='#'>East Boston, MA</a></li>
+              <li><a href='#'>Financial District, MA</a></li>
+              <li><a href='#'>Fort Hill, MA</a></li>
+              <li><a href='#'>Hyde Park, MA</a></li>
+              <li><a href='#'>Jamaica Plain, MA</a></li>
+              <li><a href='#'>Leather District, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>Mattapan, MA</a></li>
+              <li><a href='#'>Midtown, MA</a></li>
+              <li><a href='#'>Mission Hill, MA</a></li>
+              <li><a href='#'>North End, MA</a></li>
+              <li><a href='#'>Roslindale, MA</a></li>
+              <li><a href='#'>Roxbury, MA</a></li>
+              <li><a href='#'>Seaport District, MA</a></li>
+            </ul>
+            <ul class='col-sm-4 col-md-3'>
+              <li><a href='#'>South Boston, MA</a></li>
+              <li><a href='#'>South End, MA</a></li>
+              <li><a href='#'>The Fenway, MA</a></li>
+              <li><a href='#'>Theatre District, MA</a></li>
+              <li><a href='#'>Waterfront, MA</a></li>
+              <li><a href='#'>West End, MA</a></li>
+              <li><a href='#'>West Roxbury, MA</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- copyright -------------------->
+        <div class='copyright'>
+          <a href='index.html' class='footer-brand'>&copy; Company, Inc.</a>
+          <a href='http://ULTRAMLS.com' class='powered-by'>Powered by <strong>ULTRAMLS &trade;</strong></a>
+        </div>
+        <div class='fineprint theme mediumFontColor'>
+          <p>The property listing data and information set forth herein were provided to MLS Property Information Network, Inc. from third party sources, including sellers, lessors and public records, and were compiled by MLS Property Information Network, Inc.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- scripts -------------------->
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+    <script>window.jQuery || document.write('<script src="assets/scripts/jquery-slim.min.js"><\/script>')</script>
+    <script src='assets/scripts/bootstrap.min.js'></script>
+    <script src='assets/scripts/typeahead.bundle.min.js'></script>
+    <script src='assets/scripts/typeahead.js'></script>
+    <script src='assets/scripts/properties.js'></script>
+    <script src='assets/scripts/swiper.min.js'></script>
+    <script src='assets/scripts/index.js'></script>
+  </body>
+</html>
