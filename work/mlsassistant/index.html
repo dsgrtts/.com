@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>MLS Assistant</title>
+
+    <meta charset='utf-8'>
+    <meta name='robots' content='index, follow, all'>
+
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <meta name='description' content='A real estate MLS web portal with back-end customer management software. MLS Assistant specializes in virtual office web sites (VOW&apos;s), internet data exchange (IDX) with multiple listing service (MLS) database property searching integration including search engine optimization (SEO) and customer relationship management (CRM) services by location.'>
+    <meta name='keywords' content='realtor, real estate, software, broker, database solutions, real estate web design, web design, real estate software, SEO, search engine optimization, search, engine, optimizers, Broker Reciprocity, Internet data exchange, virtual office web site,vow, idx, mls, multiple listing service, idx real estate software, vow real estate, vow websites, idx websites, massachusetts real estate, MA real estate, rhode island real estate, RI real estate, CT real estate, Connecticut real estate, Maine real estate, ME real estate, NH real estate New Hampshire real estate, CO real estate, Colorado real estate, demo, internet data display, idd, mls idx, e-mail update, website,  MLS internet, MLS data, MLS display'>
+
+    <meta property='og:title' content='MLS Assistant'>
+    <meta property='og:description' content='A real estate MLS web portal with back-end customer management software. MLS Assistant specializes in virtual office web sites (VOW&apos;s), internet data exchange (IDX) with multiple listing service (MLS) database property searching integration including search engine optimization (SEO) and customer relationship management (CRM) services by location.'>
+    <meta property='og:type' content='website'>
+    <meta property='og:site_name' content='MLS Assistant'>
+    <meta property='og:url' content='http://mlsassistant.com'>
+    <meta property='og:image' content='assets/images/open_graph_logo.png'>
+
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-title' content='Assistant'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='white'>
+
+    <link rel='stylesheet' href='//gistcdn.githack.com/DavidWells/18e73022e723037a50d6/raw/ead7e72d11c847ad9b81f094686543522101c278/reset.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-size: 100%;
+        font-family:  'Poppins', Arial, Helvetica, sans-serif;
+        letter-spacing: 0.025em;
+      }
+      h1 { font-size: 2.50em; }
+      h2 { font-size: 2.00em; }
+      h3 { font-size: 1.70em; }
+      h4 { font-size: 1.00em; }
+      h5 { font-size: 0.83em; }
+      h6 { font-size: 0.67em; }
+      h1, h2,
+      h3, h4,
+      h5, h6 {
+        margin-bottom: 0.4em;
+        font-weight: 600;
+        line-height: 120%;
+      }
+      .light { font-weight: 300 }
+      p {
+        font-size: 1.00em;
+        font-weight: 300;
+        line-height: 165%;
+      }
+      small {
+        font-weight: 300;
+        font-size: 0.83em;
+      }
+      button:focus,
+      input:focus {
+        outline-width: 2px;
+        outline-color: #FFB762;
+        outline-style: none;
+      }
+      button,
+      .button {
+        margin: 0 20px 0 0;
+        padding: 12px 60px;
+        cursor: pointer;
+        border: 0;
+        border-radius: 10px;
+        background-color: #fff;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 400;
+      }
+      a.button {
+        text-decoration: none;
+        color: #000;
+      }
+      .button-gold {
+        background: rgb(255,234,125);
+        background: -moz-linear-gradient(127deg, rgba(255,234,125,1) 0%, rgba(255,156,84,1) 100%);
+        background: -webkit-linear-gradient(127deg, rgba(255,234,125,1) 0%, rgba(255,156,84,1) 100%);
+        background: linear-gradient(127deg, rgba(255,234,125,1) 0%, rgba(255,156,84,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffea7d",endColorstr="#ff9c54",GradientType=1);
+      }
+      input {
+        width: 100%;
+        padding: 12px 15px 12px 15px;
+        border: 0;
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: inherit;
+        text-align: left;
+        line-height: 0;
+      }
+      .body {
+        overflow: hidden;
+      }
+      .encase {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .header {
+        margin-bottom: 50px;
+      }
+      .menu {
+        padding: 30px 0 40px 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+      .menu
+      .items:nth-child(2) {
+        text-align: right;
+      }
+      .menu
+      .items:nth-child(2) li {
+        margin-left: 15px;
+      }
+      .menu
+      .items:nth-child(2) a {
+        padding: 15px 0;
+        text-decoration: none;
+      }
+      .menu
+      .items:nth-child(2)
+      a:after {
+        top: 4px;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        position: relative;
+        content: '';
+        display: block;
+        transition: .3s all ease;
+        background-color: transparent;
+      }
+      .menu
+      .items:nth-child(2)
+      a:hover:after {
+        left: 0%;
+        width: 100%;
+        background-color: #000;
+      }
+      .menu .item-brand {
+        max-width: 250px;
+      }
+      .menu
+      .item-brand img {
+        width: 100%;
+      }
+      .menu li {
+        display: inline-block;
+        text-align: left;
+      }
+      .menu li a {
+        display: inline-block;
+        font-size: 0.95em;
+        color: #000;
+      }
+      .menu .items
+      .item-user {
+        width: 50px;
+      }
+      .menu .items
+      .item-user-photo {
+        width: 50px;
+        height: 50px;
+        margin-top: -15px;
+        position: absolute;
+        border-radius: 100%;
+        background: no-repeat center top / cover;
+      }
+      .main {
+        padding-bottom: 5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10em;
+      }
+      .main
+      .segment {
+      }
+      .main
+      .segment:nth-child(odd) {
+      }
+      .segment
+      .section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3.5em;
+      }
+      .segment
+      .article {
+        box-sizing: border-box;
+      }
+      .segment
+      .button {
+        box-shadow: 0 15px 35px rgba(0,0,0, .1);
+      }
+      .article .article-headline,
+      .article .article-subline,
+      .article .article-context {
+        margin-bottom: 17px;
+      }
+      .article .actions {
+        margin-top: 40px;
+      }
+      .figure.preview {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 35px 60px rgba(
+          17, 37, 50, 0.25
+        );
+      }
+      .figure.preview {
+        line-height: 0;
+      }
+      .figure.preview
+      .figure-caption {
+        padding: 25px;
+        background-color: #fff;
+        text-align: center;
+      }
+      .figure.preview
+      .figure-link {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        font-size: 0.90em;
+        color: #000;
+      }
+      .figure.preview
+      .icon-forward {
+        right: 0;
+        position: absolute;
+      }
+      .figure.preview
+      .preview-image {
+        width: 100%;
+      }
+      .section div:nth-child(odd) {
+        background: #ddd;
+        padding: 1em;
+      }
+      .footer
+      .segment {
+        padding-top: 5em;
+      }
+      .mlsa-ring {
+        z-index: -1;
+        width: 180vh;
+        height: 180vh;
+        background: rgb(255,235,206);
+        border-radius: 100%;
+        position: absolute;
+        border-radius: 100%;
+      }
+      .mlsa-ring:after {
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        content: '';
+        position: relative;
+        display: block;
+        background-color: #fff;
+        border-radius: 100%;
+      }
+      .mlsa-ring.ring-one {
+        top: 0;
+        right: 0;
+        margin: -125vh -25vh auto auto;
+        background: -moz-linear-gradient(127deg, rgba(255,235,206,1) 33%, rgba(228,239,249,1) 53%, rgba(228,239,249,1) 100%);
+        background: -webkit-linear-gradient(127deg, rgba(255,235,206,1) 33%, rgba(228,239,249,1) 53%, rgba(228,239,249,1) 100%);
+        background: linear-gradient(127deg, rgba(255,235,206,1) 33%, rgba(228,239,249,1) 53%, rgba(228,239,249,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffebce",endColorstr="#e4eff9",GradientType=1);
+      }
+      .mlsa-ring.ring-two {
+        top: 0;
+        left: 0;
+        margin: 69vh auto auto -55vh;
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(345deg, rgba(255,255,255,1) 35%, rgba(255,235,206,1) 54%, rgba(228,239,249,1) 80%, rgba(228,239,249,1) 100%);
+        background: -webkit-linear-gradient(345deg, rgba(255,255,255,1) 35%, rgba(255,235,206,1) 54%, rgba(228,239,249,1) 80%, rgba(228,239,249,1) 100%);
+        background: linear-gradient(345deg, rgba(255,255,255,1) 35%, rgba(255,235,206,1) 54%, rgba(228,239,249,1) 80%, rgba(228,239,249,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e4eff9",GradientType=1);
+      }
+      .mlsa-ring.ring-three {
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        opacity: .3;
+        margin: 0 -40vh -115vh auto;
+        background: rgb(255,183,79);
+        background: -moz-linear-gradient(180deg, rgba(255,183,79,1) 0%, rgba(228,239,249,1) 57%, rgba(228,239,249,1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(255,183,79,1) 0%, rgba(228,239,249,1) 57%, rgba(228,239,249,1) 100%);
+        background: linear-gradient(180deg, rgba(255,183,79,1) 0%, rgba(228,239,249,1) 57%, rgba(228,239,249,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffb74f",endColorstr="#e4eff9",GradientType=1);
+      }
+      .mlsa-ring.ring-three:after {
+        background-color: #10151A;
+      }
+      .particles-js-canvas-el {
+        z-index: 0;
+        position: absolute;
+      }
+      .footer {
+        z-index: 1;
+        margin-top: 10em;
+        padding: 0 0 2em 0;
+        position: relative;
+        background-color: #10151A;
+        color: #fff;
+      }
+      .footer:after {
+        top: -10vh;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        z-index: -2;
+        width: 200%;
+        height: 100vh;
+        margin-left: -50%;
+        position: absolute;
+        content: '';
+        display: block;
+        border-radius: 100%;
+        background-color: #10151A;
+      }
+      .footer
+      .footprint {
+        padding-top: 10em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 15px;
+      }
+      .footer
+      .menu {
+        padding: 0;
+        vertical-align: top;
+        display: block;
+      }
+      .footer .menu
+      .items {
+        margin: 0;
+      }
+      .footer
+      .menu a {
+        padding: 0;
+        text-decoration: none;
+        color: #fff;
+      }
+      .footer
+      .copyright {
+        color: inherit;
+      }
+      .footer a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .footer
+      .segment {
+        /*overflow: hidden;*/
+        position: relative;
+      }
+      .footer .subscribe
+      .input-email {
+        max-width: 300px;
+        margin: 0 15px 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='page-home body'>
+      <header class='header'>
+        <div class='encase'>
+          <nav class='menu'>
+            <ul class='items'>
+              <li class='item-brand'>
+                <a href=''><img src='assets/images/mlsassistant_logo.png' alt='MLS Assistant'></a>
+              </li>
+            </ul>
+            <ul class='items'>
+              <!--
+              <li><a href='#'>Solutions</a></li>
+              <li><a href='#'>Demo</a></li>
+              -->
+              <li><a href='#'>Company</a></li>
+              <li><a href='#'>Pricing</a></li>
+              <li><a href='#'>Support</a></li>
+              <li class='item-dashboard'><a href='#'>Dashboard</a></li>
+              <li class='item-user'>
+                <a href='#'>
+                  <div class='item-user-photo' style='background-image:url(https://images.pexels.com/photos/450213/pexels-photo-450213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)'></div>
+                </a>
+              </li>
+              <li class='item-logout'><a href='#'>Log Out</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class='main'>
+        <div class='segment'>
+          <div class='encase'>
+            <div class='section'>
+              <figure class='figure preview'>
+                <figcaption class='figure-caption'>
+                  <a class='figure-link' href='#'>
+                    teamlarsluxury.com <span class='icon-forward'>></span>
+                  </a>
+                </figcaption>
+                <img class='preview-image' src='assets/images/website-teamlarsluxury.jpg' alt=''>
+              </figure>
+              <article class='article'>
+                <h2 class='article-headline'>Stunning office websites</h2>
+                <h3 class='article-subline light'>Lorem ipsum. Dolor sit amet.</h3>
+                <p class='article-context'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                <div class='actions'>
+                  <a role='button' class='button button-gold' href=''>Buy</a>
+                  <a role='button' class='button button-white' href=''>Demo</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class='segment'>
+          <div class='encase'>
+            <div class='section'>
+              <article class='article'>
+                <h2 class='article-headline'>Efficient management tools</h2>
+                <h3 class='article-subline light'>Lorem ipsum. Dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                <div class='actions'>
+                  <a role='button' class='button button-gold' href=''>Buy</a>
+                  <a role='button' class='button button-white' href=''>Demo</a>
+                </div>
+              </article>
+              <figure class='figure preview'>
+                <figcaption class='figure-caption'>
+                  <a class='figure-link' href='#'>
+                    example.com <span class='icon-forward'>></span>
+                  </a>
+                </figcaption>
+                <img class='preview-image' src='https://via.placeholder.com/1280x720' alt=''>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class='segment'>
+          <div class='encase'>
+            <div class='section'>
+              <figure class='figure preview'>
+                <figcaption class='figure-caption'>
+                  <a class='figure-link' href='#'>
+                    example.com <span class='icon-forward'>></span>
+                  </a>
+                </figcaption>
+                <img class='preview-image' src='https://via.placeholder.com/1280x720' alt=''>
+              </figure>
+              <article class='article'>
+                <h2 class='article-headline'>Beautiful property listings</h2>
+                <h3 class='article-subline light'>Lorem ipsum. Dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                <div class='actions'>
+                  <a role='button' class='button button-gold' href=''>Buy</a>
+                  <a role='button' class='button button-white' href=''>Demo</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class='footer'>
+        <div class='segment'>
+          <div class='encase'>
+            <div class='section'>
+              <article class='article'>
+                <h2 class='article-headline'>Alerts from your assistant</h2>
+                <h3 class='article-subline light'>Stay updated. Get the latest.</h3>
+                <p class='article-context'>Share your email so MLS Assistant can send you the latest guides, and  industry news.</p>
+                <div class='subscribe actions'>
+                  <form method='post'>
+                    <input class='input-email' placeholder='you@example.com'>
+                    <button class='button-gold'>Join</button>
+                  </form>
+                  <small>You can unsubscribe at any time.</small>
+                </div>
+              </article>
+            </div>
+            <div class='footprint'>
+              <div class='copyright'>
+                <span>&copy; EST. 1991 <a href='#'>www.RealEstate, Inc</a>. All Rights Reserved.</span>
+              </div>
+              <!--<nav class='menu'>
+                <ul class='items'>
+                  <li><a href='#'>Fb</a></li>
+                  <li><a href='#'>Ig</a></li>
+                  <li><a href='#'>Ln</a></li>
+                  <li><a href='#'>Tw</a></li>
+                  <li><a href='#'>Yt</a></li>
+                </ul>
+              </nav>-->
+              <nav class='menu'>
+                <ul class='items'>
+                  <li><a href='#'>Terms</a></li>
+                  <li><a href='#'>Support</a></li>
+                  <li><a href='#'>Contact Us</a></li>
+                  <li><a href='#'>About Us</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div id='mlsa-particles-three' class='mlsa-ring ring-three'></div>
+        </div>
+      </footer>
+      <div id='mlsa-particles-one' class='mlsa-ring ring-one'></div>
+      <div id='mlsa-particles-two' class='mlsa-ring ring-two'></div>
+    </div>
+    <script src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='assets/scripts/particles.js'></script>
+  </body>
+</html>
