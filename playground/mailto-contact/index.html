@@ -1,0 +1,40 @@
+<!-- style for structuring form elements -->
+<style scope>
+  form[name='contact'] input,
+  form[name='contact'] textarea,
+  form[name='contact'] button {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-sizing: border-box;
+    display: block;
+    border: 1px solid #999;
+    font-family: sans-serif;
+  }
+</style>
+
+<!-- contact form for user submissions -->
+<form name='contact'>
+  <input name='name' placeholder='Full name'>
+  <input name='recipient' type='hidden' value='some@company.com'>
+  <input name='subject' placeholder='Subject'>
+  <textarea name='message' placeholder='Message'></textarea>
+  <button name='submit' type='submit' class='contact'>Submit</button>
+</form>
+
+<!-- script to execute built-in mailto function -->
+<script>
+  (function (){
+    'use strict';
+    let contact = document.forms.namedItem('contact');
+    let mailto  = 'mailto:';
+    contact.addEventListener('submit', function(submit) {
+      submit.preventDefault();
+      mailto += contact.elements['recipient'].value + '?subject=';
+      mailto += contact.elements['subject'].value + '&body=';
+      mailto += contact.elements['message'].value;
+      location.href = mailto;
+    });
+  }());
+</script>
