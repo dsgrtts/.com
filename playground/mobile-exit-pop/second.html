@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  </head>
+  <body>
+    <style scope>
+      .pop.show:before {
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        content: '';
+        display: block;
+        background-color: rgba(0,0,0,.5);
+      }
+      .pop {
+        z-index: -1;
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        pointer-events: none;
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        text-align: center;
+        font-family: sans-serif;
+        background: #fff;
+      }
+      .pop p {
+        text-align: left;
+        line-height: 1.6em;
+      }
+      .pop.show {
+        z-index: 999;
+        pointer-events: all;
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+    <h1>Second page</h1>
+    <a href='index.html'>Go back</a> |
+    <a href='third.html'>Go to next page</a>
+    <div class='pop'>
+      <h2>This is an in-page pop up</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse laborum culpa provident, similique delectus! Ipsam laudantium, ab optio possimus, nihil temporibus expedita molestias itaque dicta error beatae quibusdam eos animi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur fuga totam eveniet, cupiditate qui quisquam omnis culpa optio, quaerat ipsa dolores itaque amet sed beatae dignissimos doloremque dolore minus excepturi!</p>
+      <a href='#' onclick='this.parentElement.classList.remove("show"); return false;'>Close</a>
+    </div>
+    <script>
+      let index = 0;
+      window.history.pushState({
+        page: 1
+      }, '', '');
+      setTimeout(function () {
+        index = 1;
+        history.pushState(null, null, '#?');
+      }, 1000);
+      window.onpopstate = function(event) {
+        if (event && window.location.hash === '#!' && index === 1) {
+          document.querySelector('.pop').classList.add('show');
+          return '';
+        }
+      }
+    </script>
+  </body>
+</html>
